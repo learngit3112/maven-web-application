@@ -1,0 +1,25 @@
+node{
+    properties([buildDiscarder(logRotator(artifactDaysToKeepStr: '', artifactNumToKeepStr: '5', daysToKeepStr: '', numToKeepStr: '5')), [$class: 'RebuildSettings', autoRebuild: false, rebuildDisabled: false], [$class: 'JobLocalConfiguration', changeReasonComment: ''], pipelineTriggers([pollSCM('* * * * *')])])
+def mavenHome=tool name: 'maven3.9.4'
+stage('checkOutCode'){
+git branch: 'development', credentialsId: '50734f5d-f41c-47f7-8f5d-282209a16239', 
+url: 'https://github.com/Mithuntechnology-Projects/maven-web-application.git'
+}
+stage('Build'){
+sh "${mavenHome}/bin/mvn clean package"
+}
+stage('GenerateSonarQubeReport'){
+sh "${mavenHome}/bin/mvn clean sonar:sonar"
+}
+
+stage('UploadArtifact'){
+sh "${mavenHome}/bin/mvn clean deploy"
+}
+stage('Deploy to Tomcat') {
+    // Remove previous deployment (optional)
+    sh "rm -rf vagrant@192.168.56.69:/opt/tomcat9/webapps/*"
+
+    // Deploy the new WAR file using curl with basic authentication
+    sh "curl -u admin:devops -T target/maven-web-application http://192.168.56.69:8888/manager/text/deploy?path=/maven-web-application"
+}
+}
