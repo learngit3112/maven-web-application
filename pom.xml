@@ -5,7 +5,7 @@
 	<groupId>com.mt</groupId>
 	<artifactId>maven-web-application</artifactId>
 	<packaging>war</packaging>
-	<version>0.0.1-SNAPSHOT</version>
+	<version>1.0.0-SNAPSHOT</version>
 	
 	<name>maven-web-application</name>
 
@@ -24,6 +24,8 @@
 		<sonar.host.url>http://192.168.56.67:9000/</sonar.host.url>
 		<sonar.login>admin</sonar.login>
 		<sonar.password>devops</sonar.password> 
+		<sonar.login>squ_515be6e31988107828064ea76e0e72dd4634925f</sonar.login>
+
 		<project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
 		<project.reporting.outputEncoding>UTF-8</project.reporting.outputEncoding>
 
@@ -97,14 +99,14 @@
 	
 	    <repository>
 	      <id>nexus</id>
-	      <name>Mithun Technologies Releases Nexus Repository</name>
-	      <url>http://54.255.174.111:8081/repository/flipkart-release/</url>
+	      <name>Facebook Releases Nexus Repository</name>
+	      <url>http://192.168.56.68:9980/repository/facebook-releases/</url>
 	    </repository>
 	    
 	    <snapshotRepository>
 	      <id>nexus</id>
-	      <name>Mithun Technologies Snapshot Nexus Repository </name>
-	      <url>http://54.255.174.111:8081/repository/flipkart-snapshot/</url>
+	      <name>Facebook Snapshot Nexus Repository </name>
+	      <url>http://192.168.56.68:9980/repository/facebook-snapshot/</url>
 	    </snapshotRepository>
 	    
 	</distributionManagement>
