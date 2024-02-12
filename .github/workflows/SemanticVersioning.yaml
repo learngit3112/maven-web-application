@@ -2,8 +2,10 @@ name: Semantic Versioning and Docker Build/Push
 
 on:
   push:
-    tags:
-      - 'v*.*.*'
+    branches:
+      - dev
+      - stage
+      - main
   # Allows you to run this workflow manually from the Actions tab
   # workflow_dispatch:
 
