@@ -1,17 +1,17 @@
-name: Semantic Versioning and Docker Build/Push
 on:
   push:
     tags:
-      - v*
+      - 'v*.*.*'
 
 jobs:
   build:
     runs-on: ubuntu-latest
     steps:
-      - uses: actions/checkout@v1
-
+      - name: Checkout code
+        uses: actions/checkout@v2
+      
       - name: Exit if not on master branch
-        if: github.ref != 'refs/heads/master' && github.event_name != 'push'
+        if: endsWith(github.ref, 'master') == false
         run: exit -1
 
       - name: Set up Java
