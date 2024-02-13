@@ -10,8 +10,8 @@ jobs:
       - name: Checkout code
         uses: actions/checkout@v2
       
-      - name: Exit if not on production branch
-        if: endsWith(github.ref, 'production') == false
+      - name: Exit if not on master branch
+        if: endsWith(github.ref, 'master') == false
         run: exit -1
 
       - name: Set up Java
