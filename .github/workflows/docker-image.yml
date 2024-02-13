@@ -9,6 +9,11 @@ jobs:
     steps:
       - uses: actions/checkout@v1
 
+      - name: Dump job github var
+        env:
+          GITHUB_VAR: ${{ toJson(github) }}
+        run: echo "$GITHUB_VAR"
+
       - name: Exit if not on production branch
         if: endsWith(github.event.base_ref, 'production') == false
         run: exit -1
