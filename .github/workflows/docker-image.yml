@@ -12,8 +12,8 @@ jobs:
       - name: Checkout code
         uses: actions/checkout@v2
       
-      - name: Exit if not on master branch
-        if: endsWith(github.ref, 'master') == false
+      - name: Exit if not on feature/semantic-versioning branch
+        if: endsWith(github.ref, 'feature/semantic-versioning') == false
         run: exit -1
 
       - name: Set up Java
