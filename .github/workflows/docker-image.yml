@@ -1,5 +1,7 @@
 on:
   push:
+    branches:
+      - feature/semantic-versioning
     tags:
       - 'v*.*.*'
 
