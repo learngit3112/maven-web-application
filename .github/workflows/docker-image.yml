@@ -10,12 +10,16 @@ jobs:
       - name: Checkout code
         uses: actions/checkout@v2
       
-      - name: Fetch all branches
+      - name: Fetch all branches and tags
         run: git fetch --all --tags
       
       - name: Get Branch
         run: |
           raw=$(git branch -r --contains ${{ github.ref }})
           branch=$(echo "$raw" | grep -oP '(?<=origin/).*')
+          if [ -z "$branch" ]; then
+            echo "No branch found for tag ${GITHUB_REF#refs/tags/}."
+            exit 1
+          fi
           echo "Branch: $branch"
           echo "BRANCH=$branch" >> $GITHUB_ENV
