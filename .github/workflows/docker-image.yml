@@ -7,15 +7,18 @@ jobs:
   build:
     runs-on: ubuntu-latest
     steps:
-      - uses: actions/checkout@v1
-
-      - name: Dump job github var
-        env:
-          GITHUB_VAR: ${{ toJson(github) }}
-        run: echo "$GITHUB_VAR"
-
+      - name: Checkout code
+        uses: actions/checkout@v2
+      
+      - name: Get Branch
+        run: |
+          raw=$(git branch -r --contains ${{ github.ref }})
+          branch=${raw/origin\//}
+          echo "Branch: $branch"
+          echo "::set-env name=BRANCH::$branch"
+      
       - name: Exit if not on production branch
-        if: endsWith(github.event.base_ref, 'production') == false
+        if: endsWith(github.ref, 'production') == false
         run: exit -1
 
       - name: Set up Java
