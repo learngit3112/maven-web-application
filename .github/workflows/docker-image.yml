@@ -3,7 +3,7 @@ name: Semantic Versioning and Docker Build/Push
 on:
   push:
     branches:
-      - master
+      - 'master'
     tags:
       - 'v*.*.*'
   # Allows you to run this workflow manually from the Actions tab
