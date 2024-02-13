@@ -2,7 +2,7 @@ name: Semantic Versioning and Docker Build/Push
 on:
   push:
     tags:
-      - v*
+      - 'v*.*.*'
 
 jobs:
   build:
@@ -11,7 +11,7 @@ jobs:
       - uses: actions/checkout@v1
 
       - name: Exit if not on master branch
-        if: github.ref != 'refs/heads/master' && github.event_name != 'push'
+        if: github.ref != 'refs/heads/master' && github.event_name == 'push'
         run: exit -1
 
       - name: Set up Java
