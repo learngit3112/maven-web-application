@@ -9,8 +9,8 @@ jobs:
     steps:
       - uses: actions/checkout@v1
 
-      - name: Exit if not on master branch
-        if: github.ref != 'refs/heads/master'
+      - name: Exit if not on production branch
+        if: endsWith(github.event.base_ref, 'production') == false
         run: exit -1
 
       - name: Set up Java
