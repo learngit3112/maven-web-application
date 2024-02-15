@@ -36,7 +36,6 @@ jobs:
           echo "{name}=branch" >> $GITHUB_OUTPUT
           echo "Branches where this tag exists : $branch."
       
-
       - name: Set up Java
         uses: actions/setup-java@v2
         with:
