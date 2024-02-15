@@ -36,10 +36,8 @@ jobs:
           echo "{name}=branch" >> $GITHUB_OUTPUT
           echo "Branches where this tag exists : $branch"
           echo $branch
-      
-      - name: Exit if not on master branch
-        if: ${{ steps.check_step.outputs.branch }} != 'master'
-        run: exit 1        
+          if: ${{ steps.check_step.outputs.branch }} != 'master'
+           exit 1        
       
       - name: Set up Java
         uses: actions/setup-java@v2
