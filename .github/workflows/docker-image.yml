@@ -34,7 +34,8 @@ jobs:
           raw=$(git branch -r --contains ${{ github.ref }})
           branch="$(echo ${raw//origin\//} | tr -d '\n')"
           echo "{name}=branch" >> $GITHUB_OUTPUT
-          echo "Branches where this tag exists : $branch."
+          echo "Branches where this tag exists : $branch"
+          echo $branch
       
       - name: Exit if not on master branch
         if: ${{ steps.check_step.outputs.branch }} != 'master'
