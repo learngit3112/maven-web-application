@@ -62,4 +62,4 @@ jobs:
           password: ${{ secrets.DOCKER_PASSWORD }}
           
       - name: Push Docker image
-        run: docker push your-docker-username/your-image-name:${{ steps.version.outputs.version }}
+        run: docker push prasad522/mavenwebapp:${{ steps.version.outputs.version }}
