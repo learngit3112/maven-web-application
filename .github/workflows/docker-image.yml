@@ -24,7 +24,7 @@ jobs:
         with:
           fetch-depth: 0
 
-      - name: Get current branch
+      - name: Exit if not on master branch
         id: check_step
         # 1. Get the list of branches ref where this tag exists
         # 2. Remove 'origin/' from that result
