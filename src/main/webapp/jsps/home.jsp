@@ -9,10 +9,9 @@
 </head>
 </head>
 <body>
-<h1 align="center">This is Prasad Ambati. Came from Gudinarava,Udayagiri,Nellore Phone:7981150674 </h1>
-<h1 align="center">Welcome to Mithun Technologies. Ph No: +91-9980923226 ,+91-9980923216 Marathahalli,Bengaluru,Karnataka </h1>
-<h1>Here i am going to test Github webhook trigger with Amazon web Services with ec2-user</h1>
-<h1 align="center"> this is prasad ambti from nellore going to take training in Mithun Technologies- Very Good Training center for DevOps with AWS in Bangalore India and also for Job Assitance Job Support also...Teaching Real Time scnerios</h1>
+<h1 align="center">This is Prasad Ambati. Working in Sigmoid Analytics, Bengaluru. </h1>
+<h1>Here i am going to test Github Actions for Semantic Versioning.</h1>
+<h1 align="center"> I am going to test Branching Strategy.</h1>
 <hr>
 <br>
 	<h1><h3> Server Side IP Address </h3><br>
@@ -36,21 +35,16 @@ out.println("Server Host Name :: "+inetAddress.getHostName());
 		<img src="images/mithunlogo.jpg" alt="" width="100">
 	</span>
 	<span style="font-weight: bold;">
-		Mithun Technologies, 
-		Martha Halli, Above ICICI Bank, Beside Meghana Foods,
+		Prasad Ambati, 
+		Martha Halli, Near Kalamandir,
 		Bangalore,
-		+91-9980923226,+91-9900012028
-		devopstrainingblr@gmail.com
 		<br>
-		<a href="mailto:devopstrainingblr@gmail.com">Mail to Mithun Technologies</a>
+		<a href="mailto:prasad.ambati522@gmail.com">Mail to Prasad Ambati</a>
 	</span>
 </div>
 <hr>
 	<p> Service : <a href="services/employee/getEmployeeDetails">Get Employee Details </p>
 <hr>
 <hr>
-<p align=center>Mithun Technologies - Consultant, Training, Development Center.</p>
-<p align=center><small>Copyrights 2022 by <a href="http://mithuntechnologies.com/">Mithun Technologies,Bengaluru</a> </small></p>
-
 </body>
 </html>
