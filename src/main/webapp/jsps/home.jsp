@@ -10,8 +10,8 @@
 </head>
 <body>
 <h1 align="center">This is Prasad Ambati. Working in Sigmoid Analytics, Bengaluru. </h1>
-<h1>Here i am going to test Github Actions for Semantic Versioning</h1>
-<h1 align="center"> this is prasad ambti from nellore going to take training in Mithun Technologies- Very Good Training center for DevOps with AWS in Bangalore India and also for Job Assitance Job Support also...Teaching Real Time scnerios</h1>
+<h1>Here i am going to test Github Actions for Semantic Versioning.</h1>
+<h1 align="center"> I am going to test Branching Strategy.</h1>
 <hr>
 <br>
 	<h1><h3> Server Side IP Address </h3><br>
