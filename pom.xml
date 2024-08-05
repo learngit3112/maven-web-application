@@ -5,7 +5,7 @@
 	<groupId>com.mt</groupId>
 	<artifactId>maven-web-application</artifactId>
 	<packaging>war</packaging>
-	<version>1.0.0-SNAPSHOT</version>
+	<version>0.0.1-SNAPSHOT</version>
 	
 	<name>maven-web-application</name>
 
@@ -21,11 +21,9 @@
 		<spring.version>5.1.2.RELEASE</spring.version>
 		<junit.version>4.11</junit.version>
 		<log4j.version>1.2.17</log4j.version>
-		<sonar.host.url>http://192.168.56.67:9000/</sonar.host.url>
+		<sonar.host.url>http://18.138.81.149:9000/</sonar.host.url>
 		<sonar.login>admin</sonar.login>
-		<sonar.password>devops</sonar.password> 
-		<sonar.login>squ_515be6e31988107828064ea76e0e72dd4634925f</sonar.login>
-
+		<sonar.password>passw0rd</sonar.password> 
 		<project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
 		<project.reporting.outputEncoding>UTF-8</project.reporting.outputEncoding>
 
@@ -99,14 +97,14 @@
 	
 	    <repository>
 	      <id>nexus</id>
-	      <name>Facebook Releases Nexus Repository</name>
-	      <url>http://192.168.56.68:9980/repository/facebook-releases/</url>
+	      <name>Mithun Technologies Releases Nexus Repository</name>
+	      <url>http://13.212.71.229:9980/mithuntechnologies/repository/canarabank-snapshot/</url>
 	    </repository>
 	    
 	    <snapshotRepository>
 	      <id>nexus</id>
-	      <name>Facebook Snapshot Nexus Repository </name>
-	      <url>http://192.168.56.68:9980/repository/facebook-snapshot/</url>
+	      <name>Mithun Technologies Snapshot Nexus Repository </name>
+	      <url>http://13.212.71.229:9980/mithuntechnologies/repository/canarabank-release/</url>
 	    </snapshotRepository>
 	    
 	</distributionManagement>
@@ -118,10 +116,10 @@
 			<plugin>
 				<groupId>org.apache.maven.plugins</groupId>
 				<artifactId>maven-compiler-plugin</artifactId>
-				<version>3.3</version>
+				<version>3.8.1</version>
 				<configuration>
-					<source>${jdk.version}</source>
-					<target>${jdk.version}</target>
+					<source>1.8</source>
+					<target>1.8</target>
 				</configuration>
 			</plugin>
 
@@ -136,7 +134,12 @@
 					</webApp>
 				</configuration>
 			</plugin>
-
+	
+			<plugin>
+        			<groupId>org.apache.maven.plugins</groupId>
+        			<artifactId>maven-war-plugin</artifactId>
+        			<version>3.3.1</version> 
+     			</plugin>
 			<plugin>
 				<groupId>org.apache.maven.plugins</groupId>
 				<artifactId>maven-eclipse-plugin</artifactId>
